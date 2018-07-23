@@ -1,0 +1,30 @@
+int MakeNumber(int seed)
+{
+	seed = MUL(MUL(seed,4),6)
+	RETURN seed
+}
+
+List<int> getPopData(List<int> popData)
+{
+	FOR(int i = 1, i < 11, 1)
+	{
+		LIST_ADD(popData,MakeNumber(i))
+	}
+	RETURN popData
+}
+
+double getAverage(List<int> popData)
+{
+	double sum = 0.0
+	FOR(int i = 0, i < LIST_SIZE(popData), 1)
+	{
+		sum = ADD(sum,LIST_GET(popData, i))
+	}
+	sum = DIV(sum,LIST_SIZE(popData))
+	RETURN sum
+}
+
+List<int> popData
+popData = getPopData(popData)
+double average = getAverage(popData)
+PRINT(average)

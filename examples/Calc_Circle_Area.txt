@@ -1,0 +1,10 @@
+double calcCircleArea(int radius)
+{
+	const double pi = 3.14
+	radius = MUL(radius,radius)
+	RETURN MUL(pi, radius)
+}
+
+int radius = 5
+double area = calcCircleArea(radius)
+PRINT(area)

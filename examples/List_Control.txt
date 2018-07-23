@@ -1,0 +1,11 @@
+List<int> list = [4,6,3,6,9]
+PRINT(list)
+PRINT(LIST_GET(list,0))
+LIST_ADD(list,5.0)
+PRINT(list)
+LIST_SETAT(list,2,7)
+PRINT(list)
+LIST_REMOVEAT(list,0)
+PRINT(list)
+LIST_CLEAR(list)
+PRINT(LIST_SIZE(list))

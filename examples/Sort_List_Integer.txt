@@ -1,0 +1,47 @@
+List<int> Sort(List<int> list)
+{
+	int lowest = 0
+	int index = 0
+	bool moved = false
+	int bigger = 0
+	bool solved  = false
+	List<int> sortedList
+	
+	FOR(int i = 0, i < LIST_SIZE(list), 1)
+	{
+		IF(LIST_GET(list, i) < bigger)
+		{
+			lowest = LIST_GET(list, i)
+			bigger = lowest
+		}
+	}
+	WHILE(solved == false)
+	{
+		FOR(int i = 0, i < LIST_SIZE(list), 1)
+		{
+			IF(LIST_GET(list, i) >= bigger)
+			{
+				bigger = LIST_GET(list, i)
+				index = i
+				moved  = true
+			}
+		}
+		IF(moved == false)
+		{
+			solved = 1
+		}
+		ELSE
+		{
+			LIST_ADD(sortedList, bigger)
+			LIST_REMOVEAT(list, index)
+			moved = false
+			bigger = lowest
+		}
+	}
+	RETURN sortedList
+}
+
+List<int> list = [5,1,9,7,8,3,6,5,4,7,8,-3,-4,-6,-7,-9,-4,10,2,6,54,28,99,145,172,-94,-6321,-547,45]
+PRINT(list)
+list = Sort(list)
+PRINT(list)

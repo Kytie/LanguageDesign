@@ -1,0 +1,32 @@
+int a = 5
+double b  = 2.0
+bool c = 1
+string d = "text"
+double e = 0.0
+
+int w = 0
+double x  = 0.0
+bool y = 0
+string z = "extra"
+
+PRINT(a)
+PRINT(b)
+PRINT(c)
+PRINT(d)
+PRINT(e)
+
+PRINT(w)
+PRINT(x)
+PRINT(y)
+PRINT(z)
+
+w = b
+x = a
+y = e
+z = c
+
+
+PRINT(w)
+PRINT(x)
+PRINT(y)
+PRINT(z)
